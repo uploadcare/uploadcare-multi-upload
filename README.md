@@ -12,7 +12,7 @@ npm install uploadcare-multi-upload --save
 
 Grab your [public and secret keys](https://uploadcare.com/documentation/keys/) from project's page.
 
-```
+```javascript
 import uploadcareMultiUpload from 'uploadcare-multi-upload'
 
 const multiUpload = uploadcareMultiUpload('YOUR_PUBLIC_KEY', 'YOUR_SECRET_KEY')
