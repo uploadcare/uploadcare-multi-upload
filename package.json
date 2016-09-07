@@ -4,25 +4,40 @@
   "description": "Upload multiple images at once",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "repository": {
-	"type": "git",
-	"url": "git+https://github.com/uploadcare/uploadcare-multi-uploader.git"
+    "type": "git",
+    "url": "git+https://github.com/uploadcare/uploadcare-multi-uploader.git"
   },
   "keywords": [
-	"uploadcare",
-	"upload",
-	"uploader"
+    "uploadcare",
+    "upload",
+    "uploader"
   ],
   "author": "Zarema Khalilova",
   "license": "MIT",
   "bugs": {
-	"url": "https://github.com/uploadcare/uploadcare-multi-uploader/issues"
+    "url": "https://github.com/uploadcare/uploadcare-multi-uploader/issues"
   },
   "homepage": "https://github.com/uploadcare/uploadcare-multi-uploader#readme",
   "devDependencies": {
-	"eslint": "^3.4.0",
-	"eslint-config-uploadcare": "^1.0.0"
+    "ava": "^0.16.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "eslint": "^3.4.0",
+    "eslint-config-uploadcare": "^1.0.0"
+  },
+  "dependencies": {
+    "uploadcare": "^0.4.3"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.test.js"
+    ],
+    "require": "babel-register",
+    "babel": {
+      "babelrc": true
+    }
   }
 }
