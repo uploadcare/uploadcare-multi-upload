@@ -4,11 +4,11 @@
   "description": "Upload multiple images at once",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uploadcare/uploadcare-multi-uploader.git"
+	"type": "git",
+	"url": "git+https://github.com/uploadcare/uploadcare-multi-uploader.git"
   },
   "keywords": [
 	"uploadcare",
@@ -18,7 +18,11 @@
   "author": "Zarema Khalilova",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uploadcare/uploadcare-multi-uploader/issues"
+	"url": "https://github.com/uploadcare/uploadcare-multi-uploader/issues"
   },
-  "homepage": "https://github.com/uploadcare/uploadcare-multi-uploader#readme"
+  "homepage": "https://github.com/uploadcare/uploadcare-multi-uploader#readme",
+  "devDependencies": {
+	"eslint": "^3.4.0",
+	"eslint-config-uploadcare": "^1.0.0"
+  }
 }
