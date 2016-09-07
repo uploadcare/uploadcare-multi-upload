@@ -1,0 +1,24 @@
+{
+  "name": "uploadcare-multi-uploader",
+  "version": "1.0.0",
+  "description": "Upload multiple images at once",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uploadcare/uploadcare-multi-uploader.git"
+  },
+  "keywords": [
+	"uploadcare",
+	"upload",
+	"uploader"
+  ],
+  "author": "Zarema Khalilova",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uploadcare/uploadcare-multi-uploader/issues"
+  },
+  "homepage": "https://github.com/uploadcare/uploadcare-multi-uploader#readme"
+}
