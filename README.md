@@ -1,1 +1,1 @@
-# uploadcare-multi-uploader
+# uploadcare-multi-upload

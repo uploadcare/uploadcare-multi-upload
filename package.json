@@ -1,10 +1,10 @@
 {
-  "name": "uploadcare-multi-uploader",
+  "name": "uploadcare-multi-upload",
   "version": "1.0.0",
   "description": "Upload multiple images at once",
   "config": {
-    "name": "uploadcare-multi-uploader",
-    "library": "uploadcare-multi-uploader"
+    "name": "uploadcare-multi-upload",
+    "library": "uploadcare-multi-upload"
   },
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uploadcare/uploadcare-multi-uploader.git"
+    "url": "git+https://github.com/uploadcare/uploadcare-multi-upload.git"
   },
   "keywords": [
     "uploadcare",
@@ -38,9 +38,9 @@
   "author": "Zarema Khalilova",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uploadcare/uploadcare-multi-uploader/issues"
+    "url": "https://github.com/uploadcare/uploadcare-multi-upload/issues"
   },
-  "homepage": "https://github.com/uploadcare/uploadcare-multi-uploader#readme",
+  "homepage": "https://github.com/uploadcare/uploadcare-multi-upload#readme",
   "devDependencies": {
     "ava": "^0.16.0",
     "babel-loader": "^6.2.5",

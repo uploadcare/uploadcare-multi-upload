@@ -1,6 +1,6 @@
 import test from 'ava'
 import getImageUrl from './get-image-url'
-import uploadcareMultiUploader from '../src'
+import uploadcareMultiUpload from '../src'
 import {publicKey, secretKey} from './uploadcare-secret'
 
 const images = []
@@ -26,9 +26,9 @@ test.cb('upload files', t => {
 		t.pass()
 	}
 
-	const uploader = uploadcareMultiUploader(publicKey, secretKey)
+	const multiUpload = uploadcareMultiUpload(publicKey, secretKey)
 
-	uploader.fromUrls(images, 'src', onSuccessUpload, onFailUpload)
+	multiUpload.fromUrls(images, 'src', onSuccessUpload, onFailUpload)
 		.then(() => t.end())
 })
 
