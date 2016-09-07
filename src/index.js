@@ -18,7 +18,7 @@ export default function(publicKey, secretKey) {
 					setTimeout(tick, 333)
 				})
 			}
-			catch (error) {
+			catch(error) {
 				return reject(error)
 			}
 		}
@@ -38,36 +38,40 @@ export default function(publicKey, secretKey) {
 					.catch((fileIsReadyError) => reject(fileIsReadyError))
 			})
 		}
-		catch (error) {
+		catch(error) {
 			return reject(error)
 		}
 	})
 
-	const fromUrls = (urls, onSuccessUrlUpload, onFailUrlUpload) => {
-		return new Promise((resolve) => {
-			let promises = []
+	const fromUrls = (files, urlFieldName, onSuccessUrlUpload, onFailUrlUpload) => new Promise((resolve) => {
+		let promises = []
 
-			urls.forEach((url) => {
-				promises.push(new Promise((innerResolve) => {
-					uploadFromUrl(url)
-						.then((fileFromUrlResult) => {
-							onSuccessUrlUpload(url, fileFromUrlResult)
+		files.forEach((file) => {
+			promises.push(new Promise((innerResolve) => {
+				const url = file[urlFieldName]
 
-							return innerResolve()
-						})
-						.catch((fileFromUrlError) => {
-							onFailUrlUpload(url, fileFromUrlError)
+				if (url === undefined) {
+					onFailUrlUpload(file, 'url is not defined')
+				}
 
-							return innerResolve()
-						})
-				}))
-			})
+				uploadFromUrl(url)
+					.then((fileFromUrlResult) => {
+						onSuccessUrlUpload(Object.assign({}, file, {uploadcare: fileFromUrlResult}))
 
-			Promise.all(promises)
-				.then(() => resolve())
-				.catch(() => resolve())
+						return innerResolve()
+					})
+					.catch((fileFromUrlError) => {
+						onFailUrlUpload(file, fileFromUrlError)
+
+						return innerResolve()
+					})
+			}))
 		})
-	}
+
+		Promise.all(promises)
+			.then(() => resolve())
+			.catch(() => resolve())
+	})
 
 	return {
 		fromUrls,
