@@ -1,6 +1,15 @@
 # uploadcare-multi-upload
 
-Upload multiple images at once with [Uploadcare REST API](https://uploadcare.com/documentation/rest/).
+Use JS to upload multiple images at once with
+[Uploadcare REST API](https://uploadcare.com/documentation/rest/).
+
+## Requirements
+
+It is implied that prior to using multi-upload with REST API,
+you have already been registered with [Uploadcare](https://uploadcare.com).
+You will also need to create a project from your
+[dashboard](https://uploadcare.com/dashboard/). This way you'll
+be able to obtain public and secret keys for your project.
 
 ## Install
 
@@ -10,7 +19,8 @@ npm install uploadcare-multi-upload --save
 
 ## Usage
 
-Grab your [public and secret keys](https://uploadcare.com/documentation/keys/) from project's page.
+Please note, in order to use `uploadcare-multi-upload` you'll need to
+grab your [public and secret keys](https://uploadcare.com/documentation/keys/).
 
 ```javascript
 import uploadcareMultiUpload from 'uploadcare-multi-upload'
@@ -37,3 +47,7 @@ const onFailUpload = (image, error) => {
 multiUpload.fromUrls(images, 'src', onSuccessUpload, onFailUpload)
 		.then(() => console.log('All images uploaded')
 ```
+
+## Contributors
+
+Current maintainer — [@Zmoki](https://github.com/Zmoki).
