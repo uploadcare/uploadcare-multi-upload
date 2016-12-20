@@ -50,4 +50,4 @@ multiUpload.fromUrls(images, 'src', onSuccessUpload, onFailUpload)
 
 ## Contributors
 
-Current maintainer — [@Zmoki](https://github.com/Zmoki).
+* [@Zmoki](https://github.com/Zmoki)
